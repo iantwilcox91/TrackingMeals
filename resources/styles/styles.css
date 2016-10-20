@@ -1,4 +1,37 @@
 h1 {
-  color: blue;
   text-align: center;
+}
+body {
+  text-align: center;
+}
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
+}
+.pie {
+  margin: auto;
+  border: 1px solid blue;
+  border-radius: 8px;
+  padding: 10px;
+  width: 25%;
+  background-color: LightGreen;
+}
+
+.album {
+  margin: auto;
+  border: 1px solid blue;
+  border-radius: 8px;
+  padding: 10px;
+  width: 25%;
+  background-color: LightBlue;
+}
+.hero-img{
+background-image: url("http://wall-papers.info/images/calm-background/calm-background-17.jpg");
+background-size: cover;
+}
+.filter {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
