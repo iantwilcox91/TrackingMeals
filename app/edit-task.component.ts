@@ -5,17 +5,17 @@ import { Task } from './task.model';
   selector: 'edit-task',
   template: `
     <div *ngIf="childSelectedTask">
-      <h1>Edit Task</h1>
+      <h1>Edit This Meal</h1>
       <div>
-        <label>Enter Task Description:</label>
+        <label>Enter Meal Name:</label>
         <input [(ngModel)]="childSelectedTask.name">
       </div>
       <div>
-        <label>Enter Task Description:</label>
+        <label>Enter Meal Details:</label>
         <input [(ngModel)]="childSelectedTask.details">
       </div>
       <div>
-        <label>Enter Task ID:</label>
+        <label>Enter Meal Calories:</label>
         <input [(ngModel)]="childSelectedTask.calories">
         <button (click)="doneClicked()">Done</button>
       </div>

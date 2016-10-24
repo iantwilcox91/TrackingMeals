@@ -5,8 +5,8 @@ import { Task } from './task.model';
   selector: 'task-display',
   template: `
   <div>
-    <input *ngIf="task.done === true" type="checkbox" checked/>
-    <input *ngIf="task.done === false" type="checkbox"/>
+    <input *ngIf="task.done === true"/>
+    <input *ngIf="task.done === false"/>
     <label>{{ task.name }}</label><br>
     <label>{{ task.details }}</label><br>
     <label>{{ task.calories }}</label>

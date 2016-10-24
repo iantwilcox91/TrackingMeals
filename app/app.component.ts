@@ -26,7 +26,7 @@ import { Task } from './task.model';
 export class AppComponent {
   public masterTaskList: Task[] = [
       new Task("hamburger", "didnt get a soda", 354),
-      new Task("fries", "only ate half", 365),
+      new Task("fries", "only ate half", 565),
   ];
   selectedTask: Task = null;
   showDetails(clickedTask: Task) {

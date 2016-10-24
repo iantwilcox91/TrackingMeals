@@ -7,9 +7,9 @@ import { Task } from './task.model';
   template: `
   <h3 class="red">select the meals you want to see</h3>
     <select (change)="onChange($event.target.value)" class="filter">
-      <option value="all">Show All</option>
-      <option value="isDone">Show Done</option>
-      <option value="notDone" selected="selected">Show Not Done</option>
+      <option value="all" selected="selected">Show All</option>
+      <option value="under500">Show under 500</option>
+      <option value="over500">Show over 500</option>
     </select>
     <hr />
     <div class="blue" *ngFor="let currentTask of childTaskList | completeness:selectedCompleteness">
