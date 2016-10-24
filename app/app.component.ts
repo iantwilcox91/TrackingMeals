@@ -6,9 +6,6 @@ import { Task } from './task.model';
   template: `
   <div class="container">
     <h1>My First Angular 2 App</h1>
-    <img src="https://images.mic.com/zaqwlpisvyetsa8nrv51oef4qjgxb7rmwelqu3tmhj0vl16o2tr4y2pwdfpljzh8.jpg" alt="mmmmyeessss like a sir" />
-    <pies></pies>
-
     <task-list
       [childTaskList]="masterTaskList"
       (clickSender)="showDetails($event)"
