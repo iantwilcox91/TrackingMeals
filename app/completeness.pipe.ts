@@ -12,7 +12,7 @@ export class CompletenessPipe implements PipeTransform {
 
     if(desiredCompleteness === "notDone") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].done === false) {
+        if (input[i].calories < 500) {
           output.push(input[i]);
         }
       }
@@ -20,7 +20,7 @@ export class CompletenessPipe implements PipeTransform {
 
     } else if (desiredCompleteness === "isDone") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].done === true) {
+        if (input[i].calories > 500) {
           output.push(input[i]);
         }
       }

@@ -5,15 +5,14 @@ import { Task } from './task.model';
   selector: 'task-display',
   template: `
   <div>
-    <input *ngIf="task.done === true" type="checkbox" checked (click)="toggleDone(false)"/>
-    <input *ngIf="task.done === false" type="checkbox" (click)="toggleDone(true)"/>
-    <label>{{ task.description }}</label>
+    <input *ngIf="task.done === true" type="checkbox" checked/>
+    <input *ngIf="task.done === false" type="checkbox"/>
+    <label>{{ task.name }}</label><br>
+    <label>{{ task.details }}</label><br>
+    <label>{{ task.calories }}</label>
   </div>
   `
 })
 export class TaskComponent {
   @Input() task: Task;
-  toggleDone(setCompleteness: boolean) {
-    this.task.done = setCompleteness;
   }
-}

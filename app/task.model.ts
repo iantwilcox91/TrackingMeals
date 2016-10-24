@@ -1,4 +1,3 @@
 export class Task {
-  public done: boolean = false;
-  constructor(public description: string, public id: number) {   }
+  constructor(public name: string, public details: string, public calories: number) {   }
 }
