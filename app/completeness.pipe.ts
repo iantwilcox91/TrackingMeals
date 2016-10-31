@@ -20,7 +20,7 @@ export class CompletenessPipe implements PipeTransform {
 
     } else if (desiredCompleteness === "under500") {
       for (var i = 0; i < input.length; i++) {
-        if (input[i].calories < 500) {
+        if (input[i].calories < 501) {
           output.push(input[i]);
         }
       }
