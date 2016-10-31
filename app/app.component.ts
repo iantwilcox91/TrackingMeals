@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Task } from './task.model';
+import { Food } from './task.model';
 
 @Component({
   selector: 'my-app',
@@ -24,18 +24,18 @@ import { Task } from './task.model';
 })
 
 export class AppComponent {
-  public masterTaskList: Task[] = [
-      new Task("hamburger", "didnt get a soda", 354),
-      new Task("fries", "only ate half", 565),
+  public masterTaskList: Food[] = [
+      new Food("hamburger", "didnt get a soda", 354),
+      new Food("fries", "only ate half", 565),
   ];
-  selectedTask: Task = null;
-  showDetails(clickedTask: Task) {
+  selectedTask: Food = null;
+  showDetails(clickedTask: Food) {
     this.selectedTask = clickedTask;
   }
   finishedEditing() {
     this.selectedTask = null;
   }
-  addTask(newTaskFromChild: Task) {
+  addTask(newTaskFromChild: Food) {
       this.masterTaskList.push(newTaskFromChild);
     }
   }

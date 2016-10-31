@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Task } from './task.model';
+import { Food } from './task.model';
 
 @Component({
   selector: 'edit-task',
@@ -24,7 +24,7 @@ import { Task } from './task.model';
 })
 
 export class EditTaskComponent {
-  @Input() childSelectedTask: Task;
+  @Input() childSelectedTask: Food;
   @Output() doneClickedSender = new EventEmitter();
   doneClicked() {
     this.doneClickedSender.emit();

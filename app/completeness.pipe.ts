@@ -1,14 +1,14 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {Task} from './task.model';
+import {Food} from './task.model';
 
 @Pipe({
   name: "completeness",
   pure: false
 })
 export class CompletenessPipe implements PipeTransform {
-  transform(input: Task[], desiredCompleteness) {
+  transform(input: Food[], desiredCompleteness) {
 
-    var output: Task[] = [];
+    var output: Food[] = [];
 
     if(desiredCompleteness === "over500") {
       for (var i = 0; i < input.length; i++) {

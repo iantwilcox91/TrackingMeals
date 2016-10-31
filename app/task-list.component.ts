@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Task } from './task.model';
+import { Food } from './task.model';
 
 
 @Component({
@@ -13,7 +13,7 @@ import { Task } from './task.model';
     </select>
     <hr />
     <div class="blue" *ngFor="let currentTask of childTaskList | completeness:selectedCompleteness">
-      <task-display [task]="currentTask"></task-display>
+      <task-display [food]="currentTask"></task-display>
       <button (click)="editButtonHasBeenClicked(currentTask)">Edit</button>
       <hr />
     </div>
@@ -21,14 +21,14 @@ import { Task } from './task.model';
 })
 
 export class TaskListComponent {
-  @Input() childTaskList: Task[];
+  @Input() childTaskList: Food[];
   @Output() clickSender = new EventEmitter();
   public selectedCompleteness: string = "notDone";
   onChange(optionFromMenu) {
     this.selectedCompleteness = optionFromMenu;
     console.log(this.selectedCompleteness);
   }
-  editButtonHasBeenClicked(taskToEdit: Task) {
+  editButtonHasBeenClicked(taskToEdit: Food) {
     this.clickSender.emit(taskToEdit);
   }
 }
